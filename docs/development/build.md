@@ -1,4 +1,4 @@
-# Building and Testing cAdvisor
+# Building cAdvisor
 
 **Note**: cAdvisor only builds on Linux since it uses Linux-only APIs.
 
@@ -11,7 +11,7 @@ cAdvisor is written in the [Go](http://golang.org) programming language. If you 
 After setting up Go, you should be able to `go get` cAdvisor as expected (we use `-d` to only download):
 
 ```
-$ go get -d github.com/google/cadvisor
+$ go get -d github.com/Brain-Gamer/cadvisor
 ```
 
 ## Building from Source
@@ -19,22 +19,5 @@ $ go get -d github.com/google/cadvisor
 At this point you can build cAdvisor from the source folder:
 
 ```
-$GOPATH/src/github.com/google/cadvisor $ make build
+$GOPATH/src/github.com/Brain-Gamer/cadvisor $ make build
 ```
-
-or run only unit tests:
-
-```
-$GOPATH/src/github.com/google/cadvisor $ make test
-```
-
-For integration tests, see the [integration testing](integration_testing.md) page.
-
-## Running Built Binary
-
-Now you can run the built binary:
-
-```
-$GOPATH/src/github.com/google/cadvisor $ sudo ./cadvisor
-```
-
