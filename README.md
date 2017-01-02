@@ -1,3 +1,8 @@
+# This is a Fork!
+
+The original can be found [here](https://github.com/google/cadvisor).
+This fork is for arm support
+
 # cAdvisor
 
 cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics. This data is exported by container and machine-wide.
@@ -49,14 +54,3 @@ See the [documentation](docs/web.md) for more details.
 cAdvisor exposes its raw and processed stats via a versioned remote REST API. See the API's [documentation](docs/api.md) for more information.
 
 There is also an official Go client implementation in the [client](client/) directory. See the [documentation](docs/clients.md) for more information.
-
-## Roadmap
-
-cAdvisor aims to improve the resource usage and performance characteristics of running containers. Today, we gather and expose this information to users. In our roadmap:
-- Advise on the performance of a container (e.g.: when it is being negatively affected by another, when it is not receiving the resources it requires, etc)
-- Auto-tune the performance of the container based on previous advise.
-- Provide usage prediction to cluster schedulers and orchestration layers.
-
-## Community
-
-Contributions, questions, and comments are all welcomed and encouraged! cAdvisor developers hang out on [Slack](https://kubernetes.slack.com) in the #sig-node channel (get an invitation [here](http://slack.kubernetes.io/)). We also have the [google-containers Google Groups mailing list](https://groups.google.com/forum/#!forum/google-containers).
