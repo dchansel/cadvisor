@@ -48,7 +48,7 @@ if [ "$RELEASE" == "true" ]; then
   build_date=$( date +%Y%m%d ) # Release date is only to day-granularity
 
   # Don't use cached build objects for releases.
-  GO_CMD="build"
+  GO_CMD="build GOARCH=arm"
 fi
 
 # go 1.4 requires ldflags format to be "-X key value", not "-X key=value"
