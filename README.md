@@ -5,7 +5,13 @@ This fork is for arm support
 
 ### Build the image yourself from scratch
 
-Fist of all, you need to have Go installed (version 1.6). Then simply run `go get -d github.com/Brain-Gamer/cadvisor` to download this repo. Find the downloaded files on your system and navigate to them. To build cAdvisor and the docker image you only need to run `deploy/build.sh`. It will compile cAdvisor and build the docker image automatically (the image is named `cadvisor:latest`). The dockerfile is also in this directory.
+Fist of all, you need to have Go installed (version 1.6). Then simply run `go get -d github.com/Brain-Gamer/cadvisor` to download this repo. Find the downloaded files on your system and navigate to them. To build cAdvisor and the docker image you only need to run `deploy/build.sh`. It will compile cAdvisor and build the docker image automatically (the image is named `cadvisor:latest`). The dockerfile is also in this directory. If you want to do it step by step you can run `make build` to build cAdvisor and `make docker` to build the docker image.
+
+### What was changed?
+
+To fix the building for arm, I added `GOARCH=arm` to the build command [here](build/build.sh#L51).
+This fixed the compiling of cAdvisor for arm (now only for arm). Next I needed to edit the dockerfile to run on arm devices.
+It uses the armhf version of alpine linux and some other packages because some of them are not available for arm. Also the glibc wasn't compiled for arm so I searched for a source with glibc for arm. Everything else isn't modified.
 
 # cAdvisor
 
