@@ -5,7 +5,7 @@ This fork is for arm support
 
 ### Build the image yourself from scratch
 
-Fist of all, you need to have Go installed (version 1.6). Then simply run `go get -d github.com/Brain-Gamer/cadvisor` to download this repo. Find the downloaded files on your system and navigate to them. To build cAdvisor and the docker image you only need to run `deploy/build.sh`. It will compile cAdvisor and build the docker image automatically. The dockerfile is also in this directory. The compiled image has the name `cadvisor:latest`.
+Fist of all, you need to have Go installed (version 1.6). Then simply run `go get -d github.com/Brain-Gamer/cadvisor` to download this repo. Find the downloaded files on your system and navigate to them. To build cAdvisor and the docker image you only need to run `deploy/build.sh`. It will compile cAdvisor and build the docker image automatically (the image is named `cadvisor:latest`). The dockerfile is also in this directory.
 
 # cAdvisor
 
