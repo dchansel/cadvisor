@@ -18,5 +18,6 @@ set -e
 set -x
 
 make build
+mv ./cadvisor /deploy/cadvisor
 
-docker build -t google/cadvisor:beta .
+docker build -t cadvisor:latest ./deploy/
